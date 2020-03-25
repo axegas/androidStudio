@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="bSuma">SUMA</string>
+    <string name="bResta">RESTA</string>
+    <string name="bMult">MULTIPLICA</string>
+    <string name="bDiv">DIVIDE</string>
+    <string name="resultado">Resultado</string>
+    <string name="num1">Inserta el primer número</string>
+    <string name="num2">Inserta el segundo número</string>
+    <string name="cabecera">Calculadora</string>
+
+</resources>
