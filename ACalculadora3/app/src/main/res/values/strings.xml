@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">ACalculadora3</string>
+    <string name="sumar">Sumar</string>
+    <string name="restar">Restar</string>
+    <string name="dividir">Dividir</string>
+    <string name="calcular">CALCULAR</string>
+    <string name="resultado">Resultado</string>
+    <string name="multiplicar">Multiplicar</string>
+    <string name="num1">Introduce el primer número</string>
+    <string name="num2">Introduce el segundo número</string>
 </resources>
