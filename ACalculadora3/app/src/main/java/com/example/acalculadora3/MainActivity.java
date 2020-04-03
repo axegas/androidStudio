@@ -54,7 +54,7 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
 
-            resultado = suma + resta + multiplicacion + division;
+            resultado = suma + resta + division + multiplicacion;
             if(resultado.equals("")){
                 resultado = "No has seleccionado ninguna operación";
             }
