@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Ejercicio4</string>
+    <string name="nombre">Nombre</string>
+    <string name="pass">Password</string>
+    <string name="BValidar">Validar</string>
+    <string name="verNombre">Nombre</string>
+    <string name="salir">Salir</string>
+</resources>

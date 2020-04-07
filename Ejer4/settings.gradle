@@ -1,0 +1,2 @@
+rootProject.name='Ejer4'
+include ':app'
