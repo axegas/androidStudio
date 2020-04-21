@@ -1,0 +1,53 @@
+<resources>
+    <string name="app_name">proyInstituto</string>
+    <string name="titulo">Bienvenido al instituto</string>
+    <string name="altaAlumno">Alta Alumno</string>
+    <string name="verAlumnos">Ver Alumnos</string>
+    <string name="altaProfesor">Alta Profesor</string>
+    <string name="verProfesores">Ver Profesores</string>
+    <string name="altaAsignatura">Alta Asignatura</string>
+    <string name="verAsignaturas">Ver Asignaturas</string>
+    <string name="verAlumnosBD">Ver Alum BD</string>
+
+    <string name="tituloAltaAlumno">Alta Alumno</string>
+    <string name="labelCursoAlumno">Curso:</string>
+    <string name="labelEdadAlumno">Edad:</string>
+    <string name="labelDNIAlumno">DNI:</string>
+    <string name="labelNombreAlumno">Nombre:</string>
+
+    <string name="tituloAltaProfesor">Alta Profesor</string>
+    <string name="labelEdadProfesor">Edad:</string>
+    <string name="labelDNIProfesor">DNI:</string>
+    <string name="labelNombreProfesor">Nombre:</string>
+
+    <string name="tituloAltaAsignatura">Alta Asignatura</string>
+    <string name="labelLibro">Libro:</string>
+    <string name="labelNombreAsignatura">Nombre:</string>
+    <string name="labelProfesor">Profesor:</string>
+
+    <string name="insertNombre"></string>
+    <string name="insertCurso"></string>
+    <string name="insertEdad"></string>
+    <string name="insertDNI"></string>
+    <string name="insertLibro"></string>
+    <string name="insertProfesor"></string>
+
+    <string name="aceptar">Aceptar</string>
+    <string name="salir">Salir</string>
+
+    <string name="tituloVerProfesores">Ver Profesores</string>
+    <string name="tituloVerAlumnos">Ver Alumnos</string>
+    <string name="nombres" />
+    <string name="dnis" />
+    <string name="edades" />
+    <string name="cursos" />
+
+    <string name="tituloVerAsignaturas">Ver Asignaturas</string>
+    <string name="libros" />
+    <string name="profes" />
+    <string name="obligatoria" />
+
+    <string name="tituloVerAlumBD">Ver alumnos BD</string>
+
+
+</resources>

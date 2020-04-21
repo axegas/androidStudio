@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".altaAlum">
+
+    <TextView
+        android:id="@+id/labelCursoAlumno"
+        android:layout_width="80dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/labelCursoAlumno"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/labelEdadAlumno" />
+
+    <TextView
+        android:id="@+id/labelEdadAlumno"
+        android:layout_width="80dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/labelEdadAlumno"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/labelDNIAlumno" />
+
+    <TextView
+        android:id="@+id/labelDNIAlumno"
+        android:layout_width="80dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/labelDNIAlumno"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/labelNombre" />
+
+    <TextView
+        android:id="@+id/tituloAltaAlumno"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:text="@string/tituloAltaAlumno"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="409dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="20dp"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tituloAltaAlumno" />
+
+    <EditText
+        android:id="@+id/insertNombre"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="150dp"
+        android:autofillHints=""
+        android:ems="10"
+        android:hint="@string/insertNombre"
+        android:inputType="textPersonName"
+        android:text="@string/insertNombre"
+        app:layout_constraintStart_toEndOf="@+id/labelNombre"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="@string/insertNombre" />
+
+    <EditText
+        android:id="@+id/insertEdadAlumno"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="20dp"
+        android:autofillHints=""
+        android:ems="10"
+        android:hint="@string/insertEdad"
+        android:inputType="number"
+        android:text="@string/insertEdad"
+        app:layout_constraintStart_toEndOf="@+id/labelEdadAlumno"
+        app:layout_constraintTop_toBottomOf="@+id/insertDNI"
+        tools:text="@string/insertEdad" />
+
+    <EditText
+        android:id="@+id/insertCurso"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="20dp"
+        android:autofillHints=""
+        android:ems="10"
+        android:hint="@string/insertCurso"
+        android:inputType="textPersonName"
+        android:text="@string/insertCurso"
+        app:layout_constraintStart_toEndOf="@+id/labelCursoAlumno"
+        app:layout_constraintTop_toBottomOf="@+id/insertEdadAlumno"
+        tools:text="@string/insertCurso" />
+
+    <TextView
+        android:id="@+id/labelNombre"
+        android:layout_width="80dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="150dp"
+        android:text="@string/labelNombreAlumno"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/aceptarAltaAlumno"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="450dp"
+        android:onClick="aceptar"
+        android:text="@string/aceptar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/salirAltaAlumno"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="450dp"
+        android:onClick="salir"
+        android:text="@string/salir"
+        app:layout_constraintStart_toEndOf="@+id/aceptarAltaAlumno"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/insertDNI"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:hint="@string/insertDNI"
+        android:inputType="textPersonName"
+        android:text="@string/insertDNI"
+        app:layout_constraintStart_toEndOf="@+id/labelDNIAlumno"
+        app:layout_constraintTop_toBottomOf="@+id/insertNombre"
+        android:autofillHints="" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

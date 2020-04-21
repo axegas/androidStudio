@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">proyecto</string>
+    <string name="nombre">Nombre</string>
+    <string name="pass">Password</string>
+    <string name="BValidar">Entrar</string>
+    <string name="verNombre">Nombre</string>
+    <string name="salir">Salir</string>
+    <string name="titulo">Bienvenido al Bingo</string>
+    <string name="BMarcar">Lanzar bola</string>
+
+    <string name="resultado"></string>
+    <string name="celda"></string>
+    <string name="numeros">Numeros que han salido:</string>
+    <string name="total">0</string>
+    <string name="linea">Linea</string>
+    <string name="bingo">Bingo</string>
+    <string name="reset">Reset</string>
+
+</resources>
