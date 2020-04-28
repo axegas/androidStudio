@@ -33,12 +33,6 @@ public class Asignatura implements Serializable {
 	public String getObligatoria() {
 		return obligatoria;
 	}
-	//toString
-	public String toString() {
-		return "- " + nombre + ", libro: " + libro + ", profesor: " + profesor.getNombre()
-				+ ", obligatoria: " + obligatoria + "\n";
-	}
-	
 	
 	
 }

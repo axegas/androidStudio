@@ -4,13 +4,11 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.database.SQLException;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.EditText;
-import android.widget.Toast;
-
-import java.util.ArrayList;
-import java.util.Iterator;
+import android.widget.*;
+import java.util.*;
 
 public class altaAsig extends AppCompatActivity {
 
@@ -52,10 +50,9 @@ public class altaAsig extends AppCompatActivity {
                     cbd.agregarAsignatura(nom, lib, profe.getDNI());
                     setResult(Activity.RESULT_OK, alta);
                     finish();
-                }catch(Exception e){
-                    Toast.makeText(this,e.getMessage(), Toast.LENGTH_LONG).show();
+                }catch(SQLException e){
+                    Toast.makeText(this,"Nombre incorrecto", Toast.LENGTH_LONG).show();
                 }
-
             }else{
                 Toast.makeText(this,"No se encuentra el profesor", Toast.LENGTH_LONG).show();
             }

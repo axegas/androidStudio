@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.database.SQLException;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
@@ -31,10 +32,14 @@ public class altaProfesor extends AppCompatActivity {
         String EDAD = edad.getText().toString();
 
         if (!nom.equals("") && !DNI.equals("") &&!EDAD.equals("")){
-            conectaBD cbd = new conectaBD(getApplicationContext());
-            cbd.agregarProfesor(DNI, nom, Integer.parseInt(EDAD));
-            setResult(Activity.RESULT_OK, alta);
-            finish();
+            try{
+                conectaBD cbd = new conectaBD(getApplicationContext());
+                cbd.agregarProfesor(DNI, nom, Integer.parseInt(EDAD));
+                setResult(Activity.RESULT_OK, alta);
+                finish();
+            }catch(SQLException e){
+                Toast.makeText(this,"DNI incorrecto", Toast.LENGTH_LONG).show();
+            }
         }else{
             Toast.makeText(this,"Falta rellenar algún campo", Toast.LENGTH_LONG).show();
         }

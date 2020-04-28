@@ -2,40 +2,37 @@ package com.example.institutosql;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.ActionBar;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
+import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
+import android.widget.ScrollView;
 import android.widget.TextView;
-import android.widget.Toast;
-
-import java.util.ArrayList;
-import java.util.Iterator;
+import java.util.*;
 
 public class verAsignaturas extends AppCompatActivity {
-    TextView nombres;
-    TextView libros;
-    TextView profes;
-    TextView obligatoria;
-    ArrayList<Asignatura> asignaturas;
 
+
+    ArrayList<Asignatura> asignaturas;
+    private ViewGroup layout;
+    private ScrollView scrollView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_ver_asignaturas);
+        setContentView(R.layout.activity_ver);
 
-        obligatoria = findViewById(R.id.obligatoria);
-        nombres = findViewById(R.id.nombresAsig);
-        libros = findViewById(R.id.librosAsig);
-        profes = findViewById(R.id.profesAsig);
+        layout = (ViewGroup) findViewById(R.id.content);
+        scrollView = (ScrollView) findViewById(R.id.scrollView);
 
-        try{
-            conectaBD bd = new conectaBD(getApplicationContext());
-            asignaturas = bd.mostrarAsignaturas();
-            mostrar();
-        }catch (Exception e){
-            Toast.makeText(this,e.getMessage(), Toast.LENGTH_LONG).show();
-        }
+        conectaBD bd = new conectaBD(getApplicationContext());
+        asignaturas = bd.mostrarAsignaturas();
+
+        mostrar();
     }
 
     public void salir(View view){
@@ -44,23 +41,42 @@ public class verAsignaturas extends AppCompatActivity {
         finish();
     }
     public void mostrar() {
-        String stNombre = "NOMBRE\n--------\n";
-        String stLibro = "LIBRO\n-------\n";
-        String stProfesor = "PROFESOR\n-----\n";
-        String stObligatoria = "OBLIGATORIA\n-----\n";
-
         Asignatura asig;
         Iterator<Asignatura> iter = asignaturas.iterator();
         while(iter.hasNext()){
             asig = iter.next();
-            stNombre += asig.getNombre() + "\n";
-            stLibro += asig.getLibro() + "\n";
-            stProfesor += asig.getProfesor().getNombre() + "\n";
-            stObligatoria += asig.getObligatoria()+"\n";
+            addChild(asig);
         }
-        nombres.setText(stNombre);
-        libros.setText(stLibro);
-        profes.setText(stProfesor);
-        obligatoria.setText(stObligatoria);
+    }
+    private void addChild(Asignatura asig)
+    {
+        LayoutInflater inflater = LayoutInflater.from(this);
+        int id = R.layout.asignatura;
+
+        RelativeLayout relativeLayout = (RelativeLayout) inflater.inflate(id, null, false);
+
+        TextView nombre = (TextView) relativeLayout.findViewById(R.id.vistaNombre);
+        TextView libro = (TextView) relativeLayout.findViewById(R.id.vistaLibro);
+        TextView profesor = (TextView) relativeLayout.findViewById(R.id.vistaProfesor);
+        TextView obligatoria = (TextView) relativeLayout.findViewById(R.id.vistaObligatoria);
+        nombre.setText(asig.getNombre());
+        libro.setText(asig.getLibro());
+        profesor.setText(asig.getProfesor().getNombre());
+        obligatoria.setText("Obligatoria: " + asig.getObligatoria());
+
+        LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(ActionBar.LayoutParams.WRAP_CONTENT, ActionBar.LayoutParams.WRAP_CONTENT);
+        params.topMargin = 15;
+
+        relativeLayout.setPadding(5, 3, 5, 3);
+        relativeLayout.setLayoutParams(params);
+
+        layout.addView(relativeLayout);
+
+        scrollView.post(new Runnable() {
+                            public void run() {
+                                scrollView.fullScroll(ScrollView.FOCUS_DOWN);
+                            }
+                        }
+        );
     }
 }

@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".examinar">
+
+    <TextView
+        android:id="@+id/tituloExaminar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:text="@string/tituloExaminar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="409dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="20dp"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tituloExaminar" />
+
+    <TextView
+        android:id="@+id/labelDNIAlumnoExaminar"
+        android:layout_width="80dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="150dp"
+        android:text="@string/labelDNIAlumnoExaminar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/labelNombreAsignatura"
+        android:layout_width="80dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="30dp"
+        android:text="@string/labelNombreAsignaturaExaminar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/labelDNIAlumnoExaminar" />
+
+    <EditText
+        android:id="@+id/insertNombre"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="30dp"
+        android:autofillHints=""
+        android:ems="10"
+        android:hint="@string/insertNombre"
+        android:inputType="textPersonName"
+        android:text="@string/insertNombre"
+        app:layout_constraintStart_toEndOf="@+id/labelNombreAsignatura"
+        app:layout_constraintTop_toBottomOf="@+id/insertDNI"
+        tools:text="@string/insertNombre" />
+
+    <EditText
+        android:id="@+id/insertDNI"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="150dp"
+        android:autofillHints=""
+        android:ems="10"
+        android:hint="@string/insertDNI"
+        android:inputType="textPersonName"
+        android:text="@string/insertDNI"
+        app:layout_constraintStart_toEndOf="@+id/labelDNIAlumnoExaminar"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/aceptarExaminar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="500dp"
+        android:onClick="aceptar"
+        android:text="@string/aceptar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/salirExaminar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="500dp"
+        android:onClick="salir"
+        android:text="@string/salir"
+        app:layout_constraintStart_toEndOf="@+id/aceptarExaminar"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/labelNota"
+        android:layout_width="80dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="30dp"
+        android:text="@string/labelNota"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/labelNombreAsignatura" />
+
+    <TextView
+        android:id="@+id/labelFecha"
+        android:layout_width="80dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="30dp"
+        android:text="@string/labelFecha"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/labelNota" />
+
+    <EditText
+        android:id="@+id/insertFecha"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="30dp"
+        android:autofillHints=""
+        android:ems="10"
+        android:hint="@string/insertFecha"
+        android:inputType="date"
+        app:layout_constraintStart_toEndOf="@+id/labelFecha"
+        app:layout_constraintTop_toBottomOf="@+id/insertNota" />
+
+    <EditText
+        android:id="@+id/insertNota"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="30dp"
+        android:autofillHints=""
+        android:ems="10"
+        android:hint="@string/insertNota"
+        android:inputType="numberDecimal"
+        app:layout_constraintStart_toEndOf="@+id/labelNota"
+        app:layout_constraintTop_toBottomOf="@+id/insertNombre" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

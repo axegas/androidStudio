@@ -7,6 +7,7 @@
     <string name="verProfesores">Ver Profesores</string>
     <string name="altaAsignatura">Alta Asignatura</string>
     <string name="verAsignaturas">Ver Asignaturas</string>
+    <string name="Bmatricular">matricular</string>
 
     <string name="tituloAltaAlumno">Alta Alumno</string>
     <string name="labelCursoAlumno">Curso:</string>
@@ -34,16 +35,48 @@
     <string name="aceptar">Aceptar</string>
     <string name="salir">Salir</string>
 
-    <string name="tituloVerProfesores">Ver Profesores</string>
-    <string name="tituloVerAlumnos">Ver Alumnos</string>
-    <string name="nombres" />
-    <string name="dnis" />
-    <string name="edades" />
-    <string name="cursos" />
+    <string name="vistaDNI">dni</string>
+    <string name="vistaNombre">nombre</string>
+    <string name="vistaEdad">edad</string>
+    <string name="vistaCurso">curso</string>
+    <string name="vistaLibro">libro</string>
+    <string name="vistaProfesor">profesor</string>
+    <string name="vistaObligatoria">Obligatoria</string>
 
-    <string name="tituloVerAsignaturas">Ver Asignaturas</string>
-    <string name="libros" />
-    <string name="profes" />
-    <string name="obligatoria" />
+    <string name="tituloMatricular">Matricular</string>
+    <string name="labelDNIAlumnoMatricular">DNI Alumno</string>
+    <string name="labelNombreAsignaturaMatricular">Asignatura:</string>
+    <string name="vistaVer">Detalle</string>
+    <string name="vistaAlumnoNombre">nombre</string>
+    <string name="vistaAlumnoDNI">DNI</string>
+    <string name="vistaAlumnoEdad">Edad</string>
+    <string name="vistaAlumnoCurso">Curso</string>
+    <string name="Bexaminar">Examinar</string>
+
+    <string name="tituloExaminar">Examinar</string>
+    <string name="labelDNIAlumnoExaminar">DNI Alumno:</string>
+    <string name="labelNombreAsignaturaExaminar">Asignatura:</string>
+    <string name="labelNota">Nota:</string>
+    <string name="labelFecha">Fecha:</string>
+    <string name="insertNota"></string>
+    <string name="insertFecha"></string>
+    <string name="titAsig">Asignaturas:</string>
+    <string name="titExam">Examenes:</string>
+    <string name="BaltaCurso">alta curso</string>
+    <string name="BverCursos">Ver Cursos</string>
+    <string name="title_activity_ver_alumnos2">verAlumnos2</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="vistaNotaMedia">Nota Media</string>
+    <string name="vistaCalificacion">calificacion</string>
+    <string name="vistaFecha">Fecha</string>
+    <string name="vistaNota">Nota</string>
+
 
 </resources>

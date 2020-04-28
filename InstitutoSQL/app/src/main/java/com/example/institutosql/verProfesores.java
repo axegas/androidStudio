@@ -2,10 +2,16 @@ package com.example.institutosql;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.ActionBar;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
+import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
+import android.widget.ScrollView;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -13,21 +19,20 @@ import java.util.Iterator;
 
 public class verProfesores extends AppCompatActivity {
 
-    TextView nombres;
-    TextView edades;
-    TextView dnis;
     ArrayList<Profesor> profesores;
+    private ViewGroup layout;
+    private ScrollView scrollView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_ver_profesores);
+        setContentView(R.layout.activity_ver);
+
+        layout = (ViewGroup) findViewById(R.id.content);
+        scrollView = (ScrollView) findViewById(R.id.scrollView);
 
         conectaBD bd = new conectaBD(getApplicationContext());
         profesores = bd.mostrarProfesores();
 
-        nombres = findViewById(R.id.nombresProf);
-        edades = findViewById(R.id.edadesProf);
-        dnis = findViewById(R.id.dnisProf);
         mostrar();
     }
 
@@ -37,21 +42,41 @@ public class verProfesores extends AppCompatActivity {
         finish();
     }
     public void mostrar() {
-
-        String stNombre = "NOMBRE\n--------\n";
-        String stEdad = "EDAD\n-------\n";;
-        String stDNI = "DNI\n-----\n";;
-
         Profesor prof;
         Iterator<Profesor> iter = profesores.iterator();
         while(iter.hasNext()){
             prof = iter.next();
-            stNombre += prof.getNombre() + "\n";
-            stEdad += prof.getEdad() + "\n";
-            stDNI += prof.getDNI() + "\n";
+            addChild(prof);
         }
-        nombres.setText(stNombre);
-        edades.setText(stEdad);
-        dnis.setText(stDNI);
+
+    }
+    private void addChild(Profesor prof)
+    {
+        LayoutInflater inflater = LayoutInflater.from(this);
+        int id = R.layout.profesor;
+
+        RelativeLayout relativeLayout = (RelativeLayout) inflater.inflate(id, null, false);
+
+        TextView nombre = (TextView) relativeLayout.findViewById(R.id.vistaNombre);
+        TextView edad = (TextView) relativeLayout.findViewById(R.id.vistaEdad);
+        TextView dni = (TextView) relativeLayout.findViewById(R.id.vistaDNI);
+        nombre.setText(prof.getNombre());
+        edad.setText(Integer.toString(prof.getEdad()));
+        dni.setText(prof.getDNI());
+
+        LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(ActionBar.LayoutParams.WRAP_CONTENT, ActionBar.LayoutParams.WRAP_CONTENT);
+        params.topMargin = 15;
+
+        relativeLayout.setPadding(5, 3, 5, 3);
+        relativeLayout.setLayoutParams(params);
+
+        layout.addView(relativeLayout);
+
+        scrollView.post(new Runnable() {
+                            public void run() {
+                                scrollView.fullScroll(ScrollView.FOCUS_DOWN);
+                            }
+                        }
+        );
     }
 }

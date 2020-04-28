@@ -1,0 +1,68 @@
+<resources>
+    <string name="app_name">Instituto SQL v2</string>
+
+    <string name="vistaVer">Detalle</string>
+    <string name="vistaNombre">nombre</string>
+    <string name="vistaDNI">DNI</string>
+    <string name="vistaEdad">Edad</string>
+    <string name="vistaCurso">Curso</string>
+    <string name="vistaCategoria">Categoria</string>
+    <string name="vistaNotaMedia">Nota Media</string>
+    <string name="vistaLibro">libro</string>
+    <string name="vistaProfesor">profesor</string>
+    <string name="vistaObligatoria">Obligatoria</string>
+    <string name="vistaCalificacion">Calificacion</string>
+    <string name="vistaFecha">Fecha</string>
+    <string name="vistaNota">Nota</string>
+
+
+    <string name="botAlumnosMain">Alumnos</string>
+    <string name="botProfesoresMain">Profesores</string>
+    <string name="botAsignaturasMain">Asignaturas</string>
+
+    <string name="tituloVistaAlumno">Detalle Alumno</string>
+    <string name="tituloMatricular">Matricular</string>
+    <string name="tituloAltaProfesor">Alta Profesor</string>
+    <string name="tituloAltaAsignatura">Alta Asignatura</string>
+    <string name="tituloAltaAlumno">Alta Alumno</string>
+    <string name="tituloVerProfesores">Ver Profesores</string>
+    <string name="tituloVerAlumnos">Ver Alumnos</string>
+    <string name="tituloVerAsignaturas">Ver Asignaturas</string>
+    <string name="tituloExaminar">Examinar</string>
+
+    <string name="labelCurso">Curso:</string>
+    <string name="labelEdad">Edad:</string>
+    <string name="labelDNI">DNI:</string>
+    <string name="labelNombre">Nombre:</string>
+    <string name="labelProfesor">DNI Profesor:</string>
+    <string name="labelLibro">Libro:</string>
+    <string name="labelCategoria">Categoria:</string>
+    <string name="labelAsignatura">Asignatura:</string>
+    <string name="labelDNIalumno">DNI Alumno:</string>
+    <string name="labelNota">Nota:</string>
+    <string name="labelFecha">Fecha:</string>
+
+    <string name="insertNombre"></string>
+    <string name="insertCurso"></string>
+    <string name="insertEdad"></string>
+    <string name="insertDNI"></string>
+    <string name="insertLibro"></string>
+    <string name="insertProfesor"></string>
+    <string name="insertCategoria"></string>
+    <string name="insertNota"></string>
+    <string name="insertFecha"></string>
+
+    <string name="aceptar">Aceptar</string>
+    <string name="salir">Salir</string>
+
+    <string name="titAsig">Asignaturas</string>
+    <string name="titExam">Examenes</string>
+
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="botMatricularMain">Matricular</string>
+    <string name="botExaminarMain">Examinar</string>
+
+
+</resources>

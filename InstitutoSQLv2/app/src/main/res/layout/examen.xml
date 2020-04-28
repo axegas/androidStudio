@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="end"
+    android:layout_marginTop="15dp"
+    android:background="@android:color/white"
+    >
+
+    <LinearLayout
+        android:id="@+id/horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/borde"
+        android:orientation="horizontal"
+        android:padding="@dimen/padding_horizontal"
+        android:paddingLeft="@dimen/padding_horizontal"
+        android:paddingTop="@dimen/padding_horizontal"
+        android:paddingRight="@dimen/padding_horizontal"
+        android:paddingBottom="@dimen/padding_horizontal">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/vistaNombre"
+                style="@style/camposVista"
+                android:text="@string/vistaNombre" />
+
+            <TextView
+                android:id="@+id/vistaFecha"
+                style="@style/camposVista"
+                android:text="@string/vistaFecha" />
+
+            <TextView
+                android:id="@+id/vistaNota"
+                style="@style/camposVista"
+                android:text="@string/vistaNota" />
+
+            <TextView
+                android:id="@+id/vistaCalificacion"
+                style="@style/camposVista"
+                android:text="@string/vistaCalificacion" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

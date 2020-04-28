@@ -2,17 +2,14 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/principal"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
     <Button
         android:id="@+id/verAsignaturas"
-        android:layout_width="150dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
-        android:layout_marginLeft="30dp"
-        android:layout_marginTop="30dp"
+        style="@style/botonesMain.resto"
         android:onClick="verAsignaturas"
         android:text="@string/verAsignaturas"
         app:layout_constraintStart_toEndOf="@+id/altaAsignatura"
@@ -20,11 +17,7 @@
 
     <Button
         android:id="@+id/altaAsignatura"
-        android:layout_width="150dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
-        android:layout_marginLeft="30dp"
-        android:layout_marginTop="30dp"
+        style="@style/botonesMain.resto"
         android:onClick="altaAsignatura"
         android:text="@string/altaAsignatura"
         app:layout_constraintStart_toStartOf="parent"
@@ -32,11 +25,7 @@
 
     <Button
         android:id="@+id/verProfesores"
-        android:layout_width="150dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
-        android:layout_marginLeft="30dp"
-        android:layout_marginTop="30dp"
+        style="@style/botonesMain.resto"
         android:onClick="verProfesores"
         android:text="@string/verProfesores"
         app:layout_constraintStart_toEndOf="@+id/altaProfesor"
@@ -64,11 +53,7 @@
 
     <Button
         android:id="@+id/altaAlumno"
-        android:layout_width="150dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
-        android:layout_marginLeft="30dp"
-        android:layout_marginTop="120dp"
+        style="@style/botonesMain.alu"
         android:onClick="altaAlumno"
         android:text="@string/altaAlumno"
         app:layout_constraintStart_toStartOf="parent"
@@ -77,11 +62,7 @@
 
     <Button
         android:id="@+id/verAlumnos"
-        android:layout_width="150dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
-        android:layout_marginLeft="30dp"
-        android:layout_marginTop="120dp"
+        style="@style/botonesMain.alu"
         android:onClick="verAlumnos"
         android:text="@string/verAlumnos"
         app:layout_constraintStart_toEndOf="@+id/altaAlumno"
@@ -89,14 +70,42 @@
 
     <Button
         android:id="@+id/altaProfesor"
-        android:layout_width="150dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
-        android:layout_marginLeft="30dp"
-        android:layout_marginTop="30dp"
+        style="@style/botonesMain.resto"
         android:onClick="altaProfesor"
         android:text="@string/altaProfesor"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/altaAlumno" />
+
+    <Button
+        android:id="@+id/Bmatricular"
+        style="@style/botonesMain.resto"
+        android:onClick="matricular"
+        android:text="@string/Bmatricular"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/altaAsignatura" />
+
+    <Button
+        android:id="@+id/Bexaminar"
+        style="@style/botonesMain.resto"
+        android:onClick="examinar"
+        android:text="@string/Bexaminar"
+        app:layout_constraintStart_toEndOf="@+id/Bmatricular"
+        app:layout_constraintTop_toBottomOf="@+id/verAsignaturas" />
+
+    <Button
+        android:id="@+id/BaltaCurso"
+        style="@style/botonesMain.resto"
+        android:onClick="altaCurso"
+        android:text="@string/BaltaCurso"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Bmatricular" />
+
+    <Button
+        android:id="@+id/BverCursos"
+        style="@style/botonesMain.resto"
+        android:onClick="verCursos"
+        android:text="@string/BverCursos"
+        app:layout_constraintStart_toEndOf="@+id/BaltaCurso"
+        app:layout_constraintTop_toBottomOf="@+id/Bexaminar" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="end"
+    android:layout_marginTop="15dp"
+    android:background="@android:color/white"
+    >
+
+    <LinearLayout
+        android:id="@+id/horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="100dp"
+        android:background="@drawable/borde"
+        android:orientation="horizontal"
+        android:padding="@dimen/padding_horizontal"
+        android:paddingLeft="@dimen/padding_horizontal"
+        android:paddingTop="@dimen/padding_horizontal"
+        android:paddingRight="@dimen/padding_horizontal"
+        android:paddingBottom="@dimen/padding_horizontal">
+
+        <LinearLayout
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/vistaNombre"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/vistaNombre" />
+
+            <TextView
+                android:id="@+id/vistaDNI"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/vistaDNI" />
+
+            <TextView
+                android:id="@+id/vistaCurso"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/vistaCurso" />
+
+            <TextView
+                android:id="@+id/vistaEdad"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/vistaEdad" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="311dp"
+            android:layout_marginRight="311dp"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/vistaVer"
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:text="@string/vistaVer"
+                app:layout_constraintStart_toEndOf="@+id/vistaNombre"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/barraTolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <LinearLayout
+        android:id="@+id/label"
+        style="@style/cuerpo.alta"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/barraTolbar">
+
+        <TextView
+            android:id="@+id/labelNombre"
+            style="@style/camposLabel"
+            android:text="@string/labelNombre" />
+
+        <TextView
+            android:id="@+id/labelDNI"
+            style="@style/camposLabel"
+            android:text="@string/labelDNI" />
+
+        <TextView
+            android:id="@+id/labelEdad"
+            style="@style/camposLabel"
+            android:text="@string/labelEdad" />
+
+        <TextView
+            android:id="@+id/labelCategoria"
+            style="@style/camposLabel"
+            android:text="@string/labelCategoria" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/insert"
+        style="@style/cuerpo.alta"
+        app:layout_constraintStart_toEndOf="@+id/label"
+        app:layout_constraintTop_toBottomOf="@+id/barraTolbar">
+
+        <EditText
+            android:id="@+id/insertNombre"
+            style="@style/camposInsert"
+            android:autofillHints=""
+            android:ems="10"
+            android:hint="@string/insertNombre"
+            android:inputType="textPersonName" />
+
+        <EditText
+            android:id="@+id/insertDNI"
+            style="@style/camposInsert"
+            android:autofillHints=""
+            android:ems="10"
+            android:hint="@string/insertDNI"
+            android:inputType="textPersonName" />
+
+        <EditText
+            android:id="@+id/insertEdad"
+            style="@style/camposInsert"
+            android:autofillHints=""
+            android:ems="10"
+            android:hint="@string/insertEdad"
+            android:inputType="number" />
+
+        <EditText
+            android:id="@+id/insertCategoria"
+            style="@style/camposInsert"
+            android:autofillHints=""
+            android:ems="10"
+            android:hint="@string/insertCategoria"
+            android:inputType="textPersonName" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/botones"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <Button
+            android:id="@+id/aceptar"
+            style="@style/botones"
+            android:onClick="aceptar"
+            android:text="@string/aceptar" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

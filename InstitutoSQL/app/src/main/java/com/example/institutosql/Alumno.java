@@ -8,15 +8,14 @@ public class Alumno extends Persona{
 	//atributos
 	private String curso;
 	private ArrayList<Asignatura> asignaturas = new ArrayList<Asignatura>();
-	private double notaMedia = 0;
-	//private ArrayList<Examen> examenes = new ArrayList<Examen>();
-	
+	private double notaMedia;
+
 	//constructor
 	public Alumno(String dni,String nombre,int edad,String curso) {
 		super(dni,nombre,edad);
 		this.curso = curso;
 	}
-	//geters
+	//geters y setters
 	public String getCurso() {
 		return curso;
 	}
@@ -25,10 +24,9 @@ public class Alumno extends Persona{
 	}
 	public ArrayList<Asignatura> getAsignaturas(){ return asignaturas;	}
 
-	//metodos
-	public void matricular(Asignatura as) {
-		asignaturas.add(as);
-	}
+	public void setNotaMedia(double nota){ notaMedia = nota;}
+	public void setAsignaturas(ArrayList<Asignatura> asignaturas){ this.asignaturas = asignaturas;	}
+
 
 	public boolean tieneAsig(Asignatura a) {
 		boolean existe = false;
@@ -41,33 +39,12 @@ public class Alumno extends Persona{
 		return existe;
 	}
 
-	/*
-	public String verAlumno() {
-		String str = "Asignaturas:\n";
-		Iterator<Asignatura> iter = asignaturas.iterator();
-		while(iter.hasNext()) {
-			str += "\t" + iter.next().toString();
-		}
-		str += "Examenes:\n";
-		Iterator<Examen> iter2 = examenes.iterator();
-		while(iter2.hasNext()) {
-			str += "\t" + iter2.next().toString();
-		}
-		return this.toString() + str + "Nota media del curso: " + this.notaMedia;
-	}*/
+
 
 
 
 	
-	/*public void examinar(Examen e) {
-		notaMedia=0;
-		examenes.add(e);
-		Iterator<Examen> iter = examenes.iterator();
-		while(iter.hasNext()) {
-			notaMedia+=iter.next().getNota();
-		}
-		notaMedia=notaMedia/examenes.size();		
-	}*/
+
 
 
 

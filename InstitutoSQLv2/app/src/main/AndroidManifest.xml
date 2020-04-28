@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.institutosqlv2">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".examinar"
+            android:label="@string/tituloExaminar"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".vistaAlumno"
+            android:label="@string/tituloVistaAlumno"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".matricular"
+            android:label="@string/tituloMatricular"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".verAsignaturas"
+            android:label="@string/tituloVerAsignaturas"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".altaAsignatura"
+            android:label="@string/tituloAltaAsignatura"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".altaProfesor"
+            android:label="@string/tituloAltaProfesor"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".verProfesores"
+            android:label="@string/tituloVerProfesores"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".verAlumnos"
+            android:label="@string/tituloVerAlumnos"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".altaAlumno"
+            android:label="@string/tituloAltaAlumno"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
