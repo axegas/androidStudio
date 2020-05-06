@@ -61,8 +61,7 @@
             android:autofillHints=""
             android:ems="10"
             android:hint="@string/insertDNI"
-            android:inputType="textPersonName"
-            android:text="@string/insertDNI" />
+            android:inputType="textPersonName" />
 
         <EditText
             android:id="@+id/insertNombre"
@@ -70,18 +69,17 @@
             android:autofillHints=""
             android:ems="10"
             android:hint="@string/insertNombre"
-            android:inputType="textPersonName"
-            android:text="@string/insertNombre"
-            tools:text="@string/insertNombre" />
+            android:inputType="textPersonName" />
 
         <EditText
             android:id="@+id/insertFecha"
             style="@style/camposInsert"
             android:autofillHints=""
+            android:clickable="true"
             android:ems="10"
+            android:focusable="true"
             android:hint="@string/insertFecha"
-            android:inputType="textPersonName"
-            android:text="@string/insertFecha" />
+            android:inputType="date" />
 
         <EditText
             android:id="@+id/insertNota"
@@ -89,9 +87,7 @@
             android:autofillHints=""
             android:ems="10"
             android:hint="@string/insertNota"
-            android:inputType="textPersonName"
-            android:text="@string/insertNota"
-            tools:text="@string/insertNota" />
+            android:inputType="numberDecimal" />
     </LinearLayout>
 
     <LinearLayout

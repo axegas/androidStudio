@@ -103,6 +103,7 @@
             style="@style/botones"
             android:onClick="aceptar"
             android:text="@string/aceptar" />
+
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

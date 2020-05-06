@@ -52,8 +52,7 @@
             android:autofillHints=""
             android:ems="10"
             android:hint="@string/insertDNI"
-            android:inputType="textPersonName"
-            android:text="@string/insertDNI" />
+            android:inputType="textPersonName" />
 
         <EditText
             android:id="@+id/insertNombre"
@@ -61,9 +60,7 @@
             android:autofillHints=""
             android:ems="10"
             android:hint="@string/insertNombre"
-            android:inputType="textPersonName"
-            android:text="@string/insertNombre"
-            tools:text="@string/insertNombre" />
+            android:inputType="textPersonName" />
 
     </LinearLayout>
 

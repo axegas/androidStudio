@@ -23,11 +23,78 @@ public class conectaBD extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
+
         db.execSQL(TABLA_ALUMNOS);
         db.execSQL(TABLA_PROFESORES);
         db.execSQL(TABLA_ASIGNATURAS);
         db.execSQL(TABLA_MATRICULAR);
         db.execSQL(TABLA_EXAMENES);
+    }
+
+    public void inicial(){
+        SQLiteDatabase db = getWritableDatabase();
+/*
+        db.execSQL("INSERT INTO alumnos VALUES('26753192y','Axel','31','1DAM')");
+        db.execSQL("INSERT INTO alumnos VALUES('12345678y','Juan','25','1DAM')");
+        db.execSQL("INSERT INTO alumnos VALUES('54878965g','Pepe','30','2DAM')");
+        db.execSQL("INSERT INTO alumnos VALUES('24631578p','Jose','25','1DAM')");
+        db.execSQL("INSERT INTO alumnos VALUES('78451236n','Mari','32','1DAM')");
+        db.execSQL("INSERT INTO alumnos VALUES('78451203u','Ana','25','1DAM')");
+        db.execSQL("INSERT INTO alumnos VALUES('78645237j','Edgar','28','1DAW')");
+
+
+        db.execSQL("INSERT INTO profesores VALUES('12345678y','Paco','25','Interino')");
+        db.execSQL("INSERT INTO profesores VALUES('54878965g','Lucia','30','Titular')");
+        db.execSQL("INSERT INTO profesores VALUES('24631578p','Isabel','25','Interina')");
+        db.execSQL("INSERT INTO profesores VALUES('78451236n','Tamara','32','Interina')");
+        db.execSQL("INSERT INTO profesores VALUES('78451203u','Raul','25','Titular')");
+        db.execSQL("INSERT INTO profesores VALUES('78645237j','Sofia','28','Titular')");
+        db.execSQL("INSERT INTO profesores VALUES('78645784j','Silvia','28','Titular')");
+
+        db.execSQL("INSERT INTO asignaturas VALUES('Programacion','Java','12345678y')");
+        db.execSQL("INSERT INTO asignaturas VALUES('Bases de datos','Bases','54878965g')");
+        db.execSQL("INSERT INTO asignaturas VALUES('Sistemas informaticos','Sistemas','78451203u')");
+        db.execSQL("INSERT INTO asignaturas VALUES('Entornos de desarrollo','Entornos','78451236n')");
+        db.execSQL("INSERT INTO asignaturas VALUES('LMI','Lenguaje','24631578p')");
+        db.execSQL("INSERT INTO asignaturas VALUES('Redes','Redes','78645237j')");
+        db.execSQL("INSERT INTO asignaturas VALUES('Ingles','Ingles','78645784j')");
+
+
+        db.execSQL("INSERT INTO matricular VALUES('Programacion','26753192y')");
+        db.execSQL("INSERT INTO matricular VALUES('Bases de datos','26753192y')");
+        db.execSQL("INSERT INTO matricular VALUES('Sistemas informaticos','26753192y')");
+        db.execSQL("INSERT INTO matricular VALUES('Entornos de desarrollo','54878965g')");
+        db.execSQL("INSERT INTO matricular VALUES('Programacion','54878965g')");
+        db.execSQL("INSERT INTO matricular VALUES('Programacion','12345678y')");
+        db.execSQL("INSERT INTO matricular VALUES('Sistemas informaticos','12345678y')");
+        db.execSQL("INSERT INTO matricular VALUES('Ingles','78645237j')");
+
+
+        db.execSQL("INSERT INTO examenes VALUES(null,'Programacion','26753192y','22/04/2020','10')");
+        db.execSQL("INSERT INTO examenes VALUES(null,'Bases de datos','26753192y','22/04/2020','10')");
+        db.execSQL("INSERT INTO examenes VALUES(null,'Sistemas informaticos','26753192y','22/04/2020','10')");
+        db.execSQL("INSERT INTO examenes VALUES(null,'Entornos de desarrollo','54878965g','22/04/2020','10')");
+        db.execSQL("INSERT INTO examenes VALUES(null,'Programacion','54878965g','22/04/2020','10')");
+        db.execSQL("INSERT INTO examenes VALUES(null,'Programacion','12345678y','22/04/2020','10')");
+        db.execSQL("INSERT INTO examenes VALUES(null,'Sistemas informaticos','12345678y','22/04/2020','10')");
+        db.execSQL("INSERT INTO examenes VALUES(null,'Ingles','78645237j','22/04/2020','10')");
+
+        db.execSQL("INSERT INTO matricular VALUES('Programacion','26753192y')");
+        db.execSQL("INSERT INTO matricular VALUES('Bases de datos','26753192y')");
+        db.execSQL("INSERT INTO matricular VALUES('Sistemas informaticos','26753192y')");
+        db.execSQL("INSERT INTO matricular VALUES('Entornos de desarrollo','54878965g')");
+        db.execSQL("INSERT INTO matricular VALUES('Programacion','54878965g')");
+        db.execSQL("INSERT INTO matricular VALUES('Programacion','12345678y')");
+        db.execSQL("INSERT INTO matricular VALUES('Sistemas informaticos','12345678y')");
+        db.execSQL("INSERT INTO matricular VALUES('Ingles','78645237j')");
+        db.execSQL("INSERT INTO matricular VALUES('LMI','26753192y')");
+        db.execSQL("INSERT INTO matricular VALUES('Redes','26753192y')");
+        db.execSQL("INSERT INTO matricular VALUES('Ingles','26753192y')");
+*/
+
+
+
+        db.close();
     }
 
     @Override
@@ -38,8 +105,12 @@ public class conectaBD extends SQLiteOpenHelper {
     }
     public void borraTabla(){
         SQLiteDatabase db = getWritableDatabase();
-        db.execSQL("DROP TABLE IF EXISTS asignaturas");
-        db.execSQL(TABLA_ASIGNATURAS);
+       /* db.execSQL("DROP TABLE IF EXISTS alumnos");
+        db.execSQL(TABLA_ALUMNOS);*/
+        db.execSQL("DROP TABLE IF EXISTS examenes");
+        db.execSQL(TABLA_EXAMENES);
+        db.execSQL("DROP TABLE IF EXISTS matricular");
+        db.execSQL(TABLA_MATRICULAR);
         db.close();
     }
 

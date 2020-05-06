@@ -29,8 +29,6 @@ public class matricular extends AppCompatActivity {
 
         nombre = findViewById(R.id.insertNombre);
         dni = findViewById(R.id.insertDNI);
-
-
     }
 
     public void aceptar(View view){

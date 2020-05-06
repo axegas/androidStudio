@@ -1,68 +1,42 @@
-fragment_second.xml
-<?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".SecondFragment">
+db.execSQL("INSERT INTO alumnos VALUES('12345678y','Juan','25','1DAM')");
+db.execSQL("INSERT INTO alumnos VALUES('54878965g','Pepe','30','2DAM')");
+db.execSQL("INSERT INTO alumnos VALUES('24631578p','Jose','25','1DAM')");
+db.execSQL("INSERT INTO alumnos VALUES('78451236n','Mari','32','1DAM')");
+db.execSQL("INSERT INTO alumnos VALUES('78451203u','Ana','25','1DAM')");
+db.execSQL("INSERT INTO alumnos VALUES('78645237j','Edgar','28','1DAW')");
 
-    <TextView
-        android:id="@+id/textview_second"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toTopOf="@id/button_second"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+db.execSQL("INSERT INTO profesores VALUES('12345678y','Paco','25','Interino')");
+db.execSQL("INSERT INTO profesores VALUES('54878965g','Lucia','30','Titular')");
+db.execSQL("INSERT INTO profesores VALUES('24631578p','Isabel','25','Interina')");
+db.execSQL("INSERT INTO profesores VALUES('78451236n','Tamara','32','Interina')");
+db.execSQL("INSERT INTO profesores VALUES('78451203u','Raul','25','Titular')");
+db.execSQL("INSERT INTO profesores VALUES('78645237j','Sofia','28','Titular')");
+db.execSQL("INSERT INTO profesores VALUES('78645784j','Silvia','28','Titular')");
 
-    <Button
-        android:id="@+id/button_second"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/previous"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/textview_second" />
-</androidx.constraintlayout.widget.ConstraintLayout>
-
-SecondFragment.java
-package com.example.institutosqlv2;
-
-import android.os.Bundle;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-
-import androidx.annotation.NonNull;
-import androidx.fragment.app.Fragment;
-import androidx.navigation.fragment.NavHostFragment;
-
-public class SecondFragment extends Fragment {
-
-    @Override
-    public View onCreateView(
-            LayoutInflater inflater, ViewGroup container,
-            Bundle savedInstanceState
-    ) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_second, container, false);
-    }
-
-    public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
-        super.onViewCreated(view, savedInstanceState);
-
-        view.findViewById(R.id.button_second).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                NavHostFragment.findNavController(SecondFragment.this)
-                        .navigate(R.id.action_SecondFragment_to_FirstFragment);
-            }
-        });
-    }
-}
+db.execSQL("INSERT INTO asignaturas VALUES('Programacion','Java','12345678y')");
+db.execSQL("INSERT INTO asignaturas VALUES('Bases de datos','Bases','54878965g')");
+db.execSQL("INSERT INTO asignaturas VALUES('Sistemas informaticos','Sistemas','78451203u')");
+db.execSQL("INSERT INTO asignaturas VALUES('Entornos de desarrollo','Entornos','78451236n')");
+db.execSQL("INSERT INTO asignaturas VALUES('LMI','Lenguaje','24631578p')");
+db.execSQL("INSERT INTO asignaturas VALUES('Redes','Redes','78645237j')");
+db.execSQL("INSERT INTO asignaturas VALUES('Ingles','Ingles','78645784j')");
 
 
+db.execSQL("INSERT INTO matricular VALUES('Programacion','26753192y')");
+db.execSQL("INSERT INTO matricular VALUES('Bases de datos','26753192y')");
+db.execSQL("INSERT INTO matricular VALUES('Sistemas informaticos','26753192y')");
+db.execSQL("INSERT INTO matricular VALUES('Entornos de desarrollo','54878965g')");
+db.execSQL("INSERT INTO matricular VALUES('Programacion','54878965g')");
+db.execSQL("INSERT INTO matricular VALUES('Programacion','12345678y')");
+db.execSQL("INSERT INTO matricular VALUES('Sistemas informaticos','12345678y')");
+db.execSQL("INSERT INTO matricular VALUES('Ingles','78645237j')");
 
 
+db.execSQL("INSERT INTO examenes VALUES(null,'Programacion','26753192y','22/04/2020','10')");
+db.execSQL("INSERT INTO examenes VALUES(null,'Bases de datos','26753192y','22/04/2020','10')");
+db.execSQL("INSERT INTO examenes VALUES(null,'Sistemas informaticos','26753192y','22/04/2020','10')");
+db.execSQL("INSERT INTO examenes VALUES(null,'Entornos de desarrollo','54878965g','22/04/2020','10')");
+db.execSQL("INSERT INTO examenes VALUES(null,'Programacion','54878965g','22/04/2020','10')");
+db.execSQL("INSERT INTO examenes VALUES(null,'Programacion','12345678y','22/04/2020','10')");
+db.execSQL("INSERT INTO examenes VALUES(null,'Sistemas informaticos','12345678y','22/04/2020','10')");
+db.execSQL("INSERT INTO examenes VALUES(null,'Ingles','78645237j','22/04/2020','10')");

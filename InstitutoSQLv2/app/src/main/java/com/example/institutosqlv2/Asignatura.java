@@ -1,16 +1,12 @@
 package com.example.institutosqlv2;
 
+public class Asignatura {
 
-import java.io.Serializable;
-
-public class Asignatura implements Serializable {
-	//atributos
 	private String nombre;
 	private String libro;
 	private Profesor profesor;
 	private String obligatoria = "NO";
-	
-	//constructor
+
 	public Asignatura(String nombre, String libro, Profesor profesor) {
 		this.nombre = nombre;
 		this.libro = libro;
@@ -20,7 +16,6 @@ public class Asignatura implements Serializable {
 		}
 	}
 
-	//getters
 	public String getNombre() {
 		return nombre;
 	}

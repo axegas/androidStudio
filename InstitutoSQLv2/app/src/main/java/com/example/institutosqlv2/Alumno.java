@@ -4,18 +4,16 @@ import java.util.ArrayList;
 import java.util.Iterator;
 
 public class Alumno extends Persona{
-	
-	//atributos
+
 	private String curso;
 	private ArrayList<Asignatura> asignaturas = new ArrayList<Asignatura>();
 	private double notaMedia;
 
-	//constructor
 	public Alumno(String dni,String nombre,int edad,String curso) {
 		super(dni,nombre,edad);
 		this.curso = curso;
 	}
-	//geters y setters
+
 	public String getCurso() {
 		return curso;
 	}

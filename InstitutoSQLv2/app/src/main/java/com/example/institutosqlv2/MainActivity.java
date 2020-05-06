@@ -9,21 +9,10 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
-
-
-    private final int ACTIVITY_ALTACURSOS = 4;
-    private final int ACTIVITY_VERALUMNOS = 5;
-    private final int ACTIVITY_VERPROFESORES = 6;
-    private final int ACTIVITY_VERASIGNATURAS = 7;
-    private final int ACTIVITY_VERCURSOS = 8;
-    private final int ACTIVITY_MATRICULAR = 9;
-    private final int ACTIVITY_EXAMINAR = 10;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
 /*
         try {
             conectaBD cbd = new conectaBD(getApplicationContext());
@@ -33,10 +22,12 @@ public class MainActivity extends AppCompatActivity {
         }*/
     }
 
+
+
     public void verAlumnos(View view){
         try {
             Intent ver = new Intent(this, verAlumnos.class);
-            startActivityForResult(ver, ACTIVITY_VERALUMNOS);
+            startActivity(ver);
         }catch (Exception e){
             Toast.makeText(this,e.getMessage(), Toast.LENGTH_LONG).show();
         }
@@ -45,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
     public void verProfesores(View view){
         try {
             Intent ver = new Intent(this, verProfesores.class);
-            startActivityForResult(ver, ACTIVITY_VERPROFESORES);
+            startActivity(ver);
         }catch (Exception e){
             Toast.makeText(this,e.getMessage(), Toast.LENGTH_LONG).show();
         }
@@ -54,7 +45,7 @@ public class MainActivity extends AppCompatActivity {
     public void verAsignaturas(View view){
         try {
             Intent ver = new Intent(this, verAsignaturas.class);
-            startActivityForResult(ver, ACTIVITY_VERASIGNATURAS);
+            startActivity(ver);
         }catch (Exception e){
             Toast.makeText(this,e.getMessage(), Toast.LENGTH_LONG).show();
         }
@@ -63,13 +54,13 @@ public class MainActivity extends AppCompatActivity {
     public void matricular(View view){
         try {
             Intent ver = new Intent(this, matricular.class);
-            startActivityForResult(ver, ACTIVITY_MATRICULAR);
+            startActivity(ver);
         }catch (Exception e){
             Toast.makeText(this,e.getMessage(), Toast.LENGTH_LONG).show();
         }
     }
     public void examinar(View view){
         Intent ver = new Intent(this, examinar.class);
-        startActivityForResult(ver, ACTIVITY_EXAMINAR);
+        startActivity(ver);
     }
 }

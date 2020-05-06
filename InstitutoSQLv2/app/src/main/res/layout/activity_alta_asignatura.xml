@@ -56,9 +56,7 @@
             android:autofillHints=""
             android:ems="10"
             android:hint="@string/insertNombre"
-            android:inputType="textPersonName"
-            android:text="@string/insertNombre"
-            tools:text="@string/insertNombre" />
+            android:inputType="textPersonName" />
 
         <EditText
             android:id="@+id/insertProfesor"
@@ -66,8 +64,7 @@
             android:autofillHints=""
             android:ems="10"
             android:hint="@string/insertProfesor"
-            android:inputType="textPersonName"
-            android:text="@string/insertProfesor" />
+            android:inputType="textPersonName" />
 
         <EditText
             android:id="@+id/insertLibro"
@@ -75,9 +72,7 @@
             android:autofillHints=""
             android:ems="10"
             android:hint="@string/insertLibro"
-            android:inputType="textPersonName"
-            android:text="@string/insertLibro"
-            tools:text="@string/insertLibro" />
+            android:inputType="textPersonName" />
 
     </LinearLayout>
 

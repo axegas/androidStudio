@@ -15,10 +15,13 @@
     <string name="vistaFecha">Fecha</string>
     <string name="vistaNota">Nota</string>
 
-
     <string name="botAlumnosMain">Alumnos</string>
     <string name="botProfesoresMain">Profesores</string>
     <string name="botAsignaturasMain">Asignaturas</string>
+    <string name="botMatricularMain">Matricular</string>
+    <string name="botExaminarMain">Examinar</string>
+    <string name="BSign_in">Iniciar</string>
+    <string name="Bprimera">Es tu primera vez?</string>
 
     <string name="tituloVistaAlumno">Detalle Alumno</string>
     <string name="tituloMatricular">Matricular</string>
@@ -29,6 +32,10 @@
     <string name="tituloVerAlumnos">Ver Alumnos</string>
     <string name="tituloVerAsignaturas">Ver Asignaturas</string>
     <string name="tituloExaminar">Examinar</string>
+
+    <string name="titAsig">Asignaturas</string>
+    <string name="titExam">Examenes</string>
+    <string name="titLogin">Iniciar aplicación</string>
 
     <string name="labelCurso">Curso:</string>
     <string name="labelEdad">Edad:</string>
@@ -42,27 +49,21 @@
     <string name="labelNota">Nota:</string>
     <string name="labelFecha">Fecha:</string>
 
-    <string name="insertNombre"></string>
-    <string name="insertCurso"></string>
-    <string name="insertEdad"></string>
-    <string name="insertDNI"></string>
-    <string name="insertLibro"></string>
-    <string name="insertProfesor"></string>
-    <string name="insertCategoria"></string>
-    <string name="insertNota"></string>
-    <string name="insertFecha"></string>
+    <string name="insertNombre">Nombre</string>
+    <string name="insertCurso">Curso</string>
+    <string name="insertEdad">Edad</string>
+    <string name="insertDNI">DNI</string>
+    <string name="insertLibro">Libro</string>
+    <string name="insertProfesor">Profesor</string>
+    <string name="insertCategoria">Categoria</string>
+    <string name="insertNota">Nota</string>
+    <string name="insertFecha">Fecha</string>
+    <string name="insertPass">Password</string>
+    <string name="insertUser">Usuario</string>
 
     <string name="aceptar">Aceptar</string>
     <string name="salir">Salir</string>
-
-    <string name="titAsig">Asignaturas</string>
-    <string name="titExam">Examenes</string>
-
-    <!-- Strings used for fragments for navigation -->
-    <string name="first_fragment_label">First Fragment</string>
-    <string name="second_fragment_label">Second Fragment</string>
-    <string name="botMatricularMain">Matricular</string>
-    <string name="botExaminarMain">Examinar</string>
-
+    <string name="borrar">Borrar</string>
+    <string name="vistaBorrar">Borrar</string>
 
 </resources>

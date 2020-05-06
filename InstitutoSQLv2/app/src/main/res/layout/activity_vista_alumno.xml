@@ -65,12 +65,7 @@
             android:id="@+id/vistaNotaMedia"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="1dp"
-            android:layout_marginLeft="1dp"
-            android:text="@string/vistaNotaMedia"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/vistaAlumnoCurso" />
+            android:text="@string/vistaNotaMedia" />
 
         <Button
             android:id="@+id/salir"
@@ -80,14 +75,10 @@
 
     </LinearLayout>
 
-
-
     <TextView
         android:id="@+id/titAsig"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="2dp"
-        android:layout_marginLeft="2dp"
         android:text="@string/titAsig"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cabecera" />
@@ -100,27 +91,24 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cabecera" />
 
+
     <RelativeLayout
-        android:id="@+id/relLayoutAsignaturas"
-        android:layout_width="220dp"
-        android:layout_height="wrap_content"
-        android:background="@color/cardview_light_background"
-        android:paddingLeft="16dp"
-        android:paddingRight="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/titExam"
+        android:layout_marginTop="250dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/titAsig">
+        app:layout_constraintTop_toBottomOf="@+id/titExam">
 
         <ScrollView
-            android:id="@+id/scrollAsignaturas"
-            android:layout_width="fill_parent"
+            android:id="@+id/scrollviewVer"
+            android:layout_width="200dp"
             android:layout_height="match_parent"
-            android:layout_alignParentTop="true"
-            android:layout_marginTop="1dp"
             android:fillViewport="true"
             android:scrollbarStyle="outsideInset">
 
             <LinearLayout
-                android:id="@+id/contentAsignaturas"
+                android:id="@+id/contentVer"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
@@ -128,22 +116,14 @@
             </LinearLayout>
         </ScrollView>
 
-    </RelativeLayout>
-
-    <RelativeLayout
-        android:id="@+id/relLayoutExamenes"
-        android:layout_width="220dp"
-        android:layout_height="wrap_content"
-        android:background="@color/cardview_light_background"
-        android:paddingLeft="16dp"
-        android:paddingRight="16dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/titExam">
-
         <ScrollView
             android:id="@+id/scrollExamenes"
-            android:layout_width="fill_parent"
-            android:layout_height="match_parent">
+            android:layout_width="200dp"
+            android:layout_height="match_parent"
+            android:layout_toEndOf="@id/scrollviewVer"
+            android:layout_toRightOf="@id/scrollviewVer"
+            android:fillViewport="true"
+            android:scrollbarStyle="outsideInset">
 
             <LinearLayout
                 android:id="@+id/contentExamenes"

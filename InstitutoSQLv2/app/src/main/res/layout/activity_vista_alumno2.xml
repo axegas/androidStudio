@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".vistaAlumno">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/barra"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <LinearLayout
+        android:id="@+id/cabecera"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/borde"
+        android:padding="@dimen/padding_horizontal"
+        android:paddingLeft="@dimen/padding_horizontal"
+        android:paddingTop="@dimen/padding_horizontal"
+        android:paddingRight="@dimen/padding_horizontal"
+        android:paddingBottom="@dimen/padding_horizontal"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/barra">
+
+        <TextView
+            android:id="@+id/vistaNombre"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/vistaNombre" />
+
+        <TextView
+            android:id="@+id/vistaDNI"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/vistaDNI" />
+
+        <TextView
+            android:id="@+id/vistaCurso"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/vistaCurso" />
+
+        <TextView
+            android:id="@+id/vistaEdad"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/vistaEdad" />
+
+        <TextView
+            android:id="@+id/vistaNotaMedia"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/vistaNotaMedia" />
+
+        <Button
+            android:id="@+id/salir"
+            style="@style/botones"
+            android:onClick="salir"
+            android:text="@string/salir" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/titAsig"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="@string/titAsig"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cabecera" />
+
+    <TextView
+        android:id="@+id/titExam"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="@string/titExam"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cabecera" />
+
+
+    <ScrollView
+        android:id="@+id/scrollviewVer"
+        android:layout_width="200dp"
+        android:layout_height="match_parent"
+        android:layout_below="@id/titAsig"
+        android:layout_marginTop="250dp"
+        android:fillViewport="true"
+        android:scrollbarStyle="outsideInset"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/titAsig">
+
+        <LinearLayout
+            android:id="@+id/contentVer"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+        </LinearLayout>
+    </ScrollView>
+
+    <ScrollView
+        android:id="@+id/scrollExamenes"
+        android:layout_width="200dp"
+        android:layout_height="match_parent"
+        android:layout_below="@id/titExam"
+        android:layout_marginTop="250dp"
+        android:layout_toEndOf="@id/scrollviewVer"
+        android:layout_toRightOf="@id/scrollviewVer"
+        android:fillViewport="true"
+        android:scrollbarStyle="outsideInset"
+        app:layout_constraintStart_toEndOf="@+id/scrollviewVer"
+        app:layout_constraintTop_toBottomOf="@+id/titExam">
+
+        <LinearLayout
+            android:id="@+id/contentExamenes"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

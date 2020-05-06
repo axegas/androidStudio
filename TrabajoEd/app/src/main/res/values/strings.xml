@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">TrabajoEd</string>
+    <string name="entrar">Entrar</string>
+
+    <string name="labelAsignatura">Asignatura:</string>
+    <string name="labelDescripcion">Descripción:</string>
+    <string name="labelFecha">Fecha:</string>
+
+    <string name="insertAsignatura">Asignatura</string>
+    <string name="insertDescripcion">Descripción</string>
+    <string name="insertFecha">Fecha</string>
+
+    <string name="vistaFecha">fecha</string>
+    <string name="vistaAsignatura">asignatura</string>
+    <string name="vistaDescripcion">descripcion</string>
+
+    <string name="aceptar">Aceptar</string>
+    <string name="acabar">acabar</string>
+    <string name="todas">todas</string>
+    <string name="pendientes">pendientes</string>
+    <string name="acabadas">acabadas</string>
+    <string name="estado">estado</string>
+
+    <string name="tituloAlta">Nueva Tarea</string>
+    <string name="tituloAcabadas">Acabadas</string>
+    <string name="tituloPendientes">Pendientes</string>
+    <string name="tituloTodas">Todas</string>
+    <string name="togglebutton">ToggleButton</string>
+    <string name="pendiente">pendiente</string>
+    <string name="acabada">acabada</string>
+
+</resources>
