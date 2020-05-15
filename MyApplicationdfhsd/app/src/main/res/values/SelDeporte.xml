@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="Seleccionar_Deporte">
+        <item>SELECCION DE DEPORTE</item>
+        <item>Baloncesto</item>
+        <item>Futbol</item>
+    </string-array>
+</resources>

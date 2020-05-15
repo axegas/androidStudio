@@ -1,13 +1,11 @@
 package com.example.trabajoed;
 
-import android.annotation.SuppressLint;
 import android.app.ActionBar;
 import android.content.Context;
 import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.ScrollView;
@@ -21,13 +19,15 @@ public class muestraLayouts implements View.OnClickListener   {
     ScrollView scrollView;
     ViewGroup viewGroup;
     Context context;
+    Class clase;
 
-    public muestraLayouts(tarea tar, int id, ScrollView scrollView, ViewGroup viewGroup, Context context)   {
+    public muestraLayouts(tarea tar, int id, ScrollView scrollView, ViewGroup viewGroup, Context context, Class clase)   {
         this.tar = tar;
         this.id = id;
         this.scrollView = scrollView;
         this.viewGroup = viewGroup;
         this.context = context;
+        this.clase = clase;
 
     }
 
@@ -80,10 +80,10 @@ public class muestraLayouts implements View.OnClickListener   {
             marcar("no", tar.getId());
             tar.noRealizar();
         }
-        irTodas();
+        volver();
     }
-    public void irTodas(){
-        Intent alta = new Intent(context, tareasTodas.class);
+    public void volver(){
+        Intent alta = new Intent(context, clase);
         context.startActivity(alta);
     }
 }

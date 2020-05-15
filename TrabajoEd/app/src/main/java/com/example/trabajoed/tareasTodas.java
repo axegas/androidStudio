@@ -23,6 +23,7 @@ public class tareasTodas extends AppCompatActivity {
 
 
     ArrayList<tarea> tareas;
+
     private ScrollView scrollView;
     private ViewGroup layout;
 
@@ -57,7 +58,7 @@ public class tareasTodas extends AppCompatActivity {
         Iterator<tarea> iter = tareas.iterator();
         while(iter.hasNext()){
             tar = iter.next();
-            ml = new muestraLayouts(tar,R.layout.tarea,scrollView,layout,this);
+            ml = new muestraLayouts(tar,R.layout.tarea,scrollView,layout,this,this.getClass());
             ml.addChild();
         }
     }

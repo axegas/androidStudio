@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">Mis Tareas</string>
+
+    <string name="Alta">Nueva Tarea</string>
+    <string name="Todas">todas</string>
+    <string name="Pendientes">Pendientes</string>
+    <string name="Acabadas">Acabadas</string>
+
+    <string name="Asignatura">Asignatura</string>
+    <string name="Descripcion">Descripción</string>
+    <string name="Fecha">Fecha</string>
+    <string name="Titulo">Titulo</string>
+
+    <string name="aceptar">Aceptar</string>
+    <string name="detalle">Detalle</string>
+    <string name="borrar">Borrar</string>
+    <string name="togglebutton">ToggleButton</string>
+    <string name="pendiente">pendiente</string>
+    <string name="acabada">acabada</string>
+    <string name="estado">Pendiente</string>
+
+</resources>

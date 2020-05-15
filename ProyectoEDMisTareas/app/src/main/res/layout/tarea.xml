@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/layoutVista"
+    >
+
+    <LinearLayout
+        android:id="@+id/horizontal"
+        android:background="@drawable/borde"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/vistaTitulo"
+                style="@style/camposVista"
+                android:layout_width="match_parent"
+                android:text="@string/Titulo" />
+
+            <TextView
+                android:id="@+id/vistaFecha"
+                style="@style/camposVista"
+                android:layout_width="match_parent"
+                android:text="@string/Fecha" />
+
+            <TextView
+                android:id="@+id/vistaAsignatura"
+                style="@style/camposVista"
+                android:layout_width="match_parent"
+                android:text="@string/Asignatura" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="100dp"
+            android:layout_marginLeft="0dp"
+            android:layout_marginEnd="0dp"
+            android:layout_marginRight="0dp"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/estado"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:text="@string/estado" />
+
+            <Button
+                android:id="@+id/detalle"
+                android:layout_width="100dp"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:text="@string/detalle" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

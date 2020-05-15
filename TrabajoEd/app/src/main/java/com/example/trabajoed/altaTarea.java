@@ -23,6 +23,8 @@ public class altaTarea extends AppCompatActivity {
         asignatura = findViewById(R.id.insertAsignatura);
         descripcion = findViewById(R.id.insertDescripcion);
         fecha = findViewById(R.id.insertFecha);
+
+
     }
 
     public void aceptar(View v){

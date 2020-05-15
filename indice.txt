@@ -1,7 +1,0 @@
-Proyectos:
-	- MyApplication -2 -> calculadora
-	- ACalculadora2
-	- Acalculadora3
-	- Ejercicio4
-	- proyecto -> bingo
-	- institutoSQL y institutoSQLv2 -> proyecto con SQLite
